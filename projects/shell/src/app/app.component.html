@@ -1,0 +1,12 @@
+<h1>Shell</h1>
+
+<strong>Actual value from CounterService</strong>: {{counterService.subObs$ | async}}<br>
+<button (click)="counterService.increment()">INCREMENT</button>
+<br>
+<a routerLink="home">Home</a>&nbsp;
+<a routerLink="products">Products</a>&nbsp;
+<a routerLink="customer">Customers</a>&nbsp;
+<a routerLink="order">Orders</a>&nbsp;
+<a routerLink="tracking">Tracking</a>
+
+<router-outlet></router-outlet>
