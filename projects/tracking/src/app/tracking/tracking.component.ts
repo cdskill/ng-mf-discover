@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CounterService } from "counter-lib";
 
 @Component({
   selector: 'app-tracking',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TrackingComponent implements OnInit {
 
-  constructor() { }
+  constructor(public counterServiceLIB: CounterService) { }
 
   ngOnInit(): void {
   }

@@ -11,10 +11,16 @@ const routes: Routes = [
   {
     path: 'products',
     loadChildren: () => loadRemoteModule({
-      remoteEntry: 'http://localhost:4004/productEntry.js',
       exposedModule: './Module',
       remoteName: 'product'
     }).then(m => m.ProductModule)
+  },
+  {
+    path: 'flights',
+    loadChildren: () => loadRemoteModule({
+      exposedModule: './Module',
+      remoteName: 'mfAlone'
+    }).then(m => m.FlightsModule)
   },
   {
     path: 'customer',

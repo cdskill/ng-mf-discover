@@ -9,10 +9,7 @@ export class CounterService {
   private sub$ = new BehaviorSubject(0);
   subObs$ = this.sub$.asObservable();
 
-  constructor() {
-  }
-
-  increment() {
+  increment(): void {
     this.sub$.next(this.sub$.value + 1);
   }
 }

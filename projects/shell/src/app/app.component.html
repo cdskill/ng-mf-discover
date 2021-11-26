@@ -2,11 +2,20 @@
 
 <strong>Actual value from CounterService</strong>: {{counterService.subObs$ | async}}<br>
 <button (click)="counterService.increment()">INCREMENT</button>
+
+<p>
+  from npm public: {{counterServiceLIB.subObs$ | async}}<br>
+  <button (click)="counterServiceLIB.increment()">INCREMENT(LIB)</button>
+</p>
+
+
+
 <br>
 <a routerLink="home">Home</a>&nbsp;
 <a routerLink="products">Products</a>&nbsp;
 <a routerLink="customer">Customers</a>&nbsp;
 <a routerLink="order">Orders</a>&nbsp;
-<a routerLink="tracking">Tracking</a>
+<a routerLink="tracking">Tracking</a>&nbsp;
+<a routerLink="flights">Flights <strong>(outside from the workspace angular)</strong></a>
 
 <router-outlet></router-outlet>

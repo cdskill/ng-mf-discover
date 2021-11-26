@@ -4,7 +4,6 @@ import {BrowserModule} from '@angular/platform-browser';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {ProductComponent} from './product/product.component';
-import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {SidebarModule} from "primeng/sidebar";
 
 @NgModule({
@@ -14,7 +13,6 @@ import {SidebarModule} from "primeng/sidebar";
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule,
     AppRoutingModule,
     SidebarModule,
   ],

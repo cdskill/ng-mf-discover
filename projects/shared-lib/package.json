@@ -6,6 +6,11 @@
     "@angular/core": "^12.2.0"
   },
   "dependencies": {
+    "counter-lib": "^0.0.2",
     "tslib": "^2.3.0"
+  },
+  "author": {
+    "name": "ARIGUI Ahmed",
+    "email": "ariguiahmed@gmail.com"
   }
 }

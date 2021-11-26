@@ -24,18 +24,11 @@ module.exports = {
   plugins: [
     new ModuleFederationPlugin({
 
-        // For remotes (please adjust)
         name: "product",
         filename: "productEntry.js",
         exposes: {
             './Module': './projects/product/src/app/product/product.module',
         },
-
-        // For hosts (please adjust)
-        // remotes: {
-        //     "shell": "shell@http://localhost:3003/remoteEntry.js",
-
-        // },
 
         shared: share({
           "@angular/core": { singleton: true, strictVersion: true, requiredVersion: 'auto' },

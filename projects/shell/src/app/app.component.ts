@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {CounterService} from "shared-lib";
+import { CounterService as counterServiceLIB} from "counter-lib";
 
 @Component({
   selector: 'app-root',
@@ -8,6 +9,6 @@ import {CounterService} from "shared-lib";
 })
 export class AppComponent {
   title = 'shell';
-  constructor(public counterService: CounterService) { }
+  constructor(public counterService: CounterService, public counterServiceLIB: counterServiceLIB) { }
 
 }

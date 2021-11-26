@@ -1,16 +1,14 @@
 import { NgModule } from '@angular/core';
 import { SharedLibComponent } from './shared-lib.component';
 
-
+export const COMPONENTS = [SharedLibComponent]
 
 @NgModule({
   declarations: [
-    SharedLibComponent
-  ],
-  imports: [
+    COMPONENTS
   ],
   exports: [
-    SharedLibComponent
+    COMPONENTS
   ]
 })
 export class SharedLibModule { }

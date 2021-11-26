@@ -9,8 +9,9 @@
     "start:customer": "ng s customer",
     "start:order": "ng s order",
     "start:tracking": "ng s tracking",
-    "build:shell": "ng build",
+    "build:shell": "ng build --project shell",
     "build:product": "ng build --project product",
+    "build:shared-lib": "ng build --project shared-lib",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "run:all": "node node_modules/@angular-architects/module-federation/src/server/mf-dev-server.js"
@@ -30,7 +31,8 @@
     "primeng": "^13.0.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.3.0",
-    "zone.js": "~0.11.4"
+    "zone.js": "~0.11.4",
+    "counter-lib": "^0.0.2"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~12.2.13",
