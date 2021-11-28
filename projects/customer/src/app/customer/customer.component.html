@@ -6,4 +6,8 @@
   <p>
     <button (click)="counterService.increment()">INCREMENT</button>
   </p>
+  <div>
+    <h4>TRANSLATED CONTENT</h4> <button (click)="ch()">change lang (testing purpose)</button>
+    <span>{{ 'billNumber' | translate }}</span>
+  </div>
 </div>

@@ -1,10 +1,12 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
+import {EagerComponent} from "./eager/eager.component";
 
 const routes: Routes = [
-  {path: '', pathMatch: 'full', redirectTo: 'product'},
+  {path: '', pathMatch: 'full', redirectTo: 'customer'},
+  {path: 'eager', component: EagerComponent},
   {
-    path: 'product',
+    path: 'customer',
     loadChildren: () => import('./customer/customer.module').then((m) => m.CustomerModule)
   }
 ];

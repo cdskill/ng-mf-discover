@@ -22,14 +22,19 @@ const routes: Routes = [
       remoteName: 'mfAlone'
     }).then(m => m.FlightsModule)
   },
+  // {
+  //   path: 'customer',
+  //   loadChildren: () => loadRemoteModule({
+  //     exposedModule: './Module',
+  //     remoteName: 'customer'
+  //   }).then(m => m.CustomerModule)
+  // },
+
   {
     path: 'customer',
-    loadChildren: () => loadRemoteModule({
-      remoteEntry: 'http://localhost:5005/customerEntry.js',
-      exposedModule: './Module',
-      remoteName: 'customer'
-    }).then(m => m.CustomerModule)
+    loadChildren: () => import('customer/Module').then(m => m.CustomerModule)
   },
+
   {
     path: 'order',
     loadChildren: () => loadRemoteModule({

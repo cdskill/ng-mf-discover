@@ -1,21 +1,47 @@
-<h1>Shell</h1>
-
-<strong>Actual value from CounterService</strong>: {{counterService.subObs$ | async}}<br>
-<button (click)="counterService.increment()">INCREMENT</button>
-
-<p>
-  from npm public: {{counterServiceLIB.subObs$ | async}}<br>
-  <button (click)="counterServiceLIB.increment()">INCREMENT(LIB)</button>
-</p>
 
 
+<p-menubar>
+  <ng-template pTemplate="start">
+    <div class="start-menu-bar" style="display: flex; align-items: center">
+      <h1>Shell</h1>
+      <div class="start-menu-bar-additional-content">
+        <a routerLink="home">Home <strong>(host/lazy_loaded_module)</strong></a>&nbsp;
+        <a routerLink="products">Products <strong>(remote)</strong></a>&nbsp;
+        <a routerLink="customer">Customers <strong>(remote)</strong></a>&nbsp;
+        <a routerLink="order">Orders <strong>(remote)</strong></a>&nbsp;
+        <a routerLink="tracking">Tracking <strong>(remote)</strong></a>&nbsp;
+        <a routerLink="flights">Flights <strong>(outside from the workspace angular)</strong></a>
+      </div>
+    </div>
+  </ng-template>
 
-<br>
-<a routerLink="home">Home</a>&nbsp;
-<a routerLink="products">Products</a>&nbsp;
-<a routerLink="customer">Customers</a>&nbsp;
-<a routerLink="order">Orders</a>&nbsp;
-<a routerLink="tracking">Tracking</a>&nbsp;
-<a routerLink="flights">Flights <strong>(outside from the workspace angular)</strong></a>
+  <ng-template pTemplate="end">
+    <p-dropdown id="languageSelector" [options]="languages" [ngModel]="selectedLang" (ngModelChange)="onLanguageChange($event)"
+                optionLabel="name"></p-dropdown>
 
-<router-outlet></router-outlet>
+  </ng-template>
+</p-menubar>
+
+
+
+<main>
+  <strong>Actual value from CounterService (local)</strong>: {{counterService.subObs$ | async}}<br>
+  <button (click)="counterService.increment()">INCREMENT (LOCAL)</button>
+
+  <p>
+    from npm public: {{counterServiceLIB.subObs$ | async}}<br>
+    <button (click)="counterServiceLIB.increment()">INCREMENT(LIB)</button>
+  </p>
+
+
+  <div id="translated-content">
+    <h2>TRANSLATED CONTENT</h2>
+    <p>
+      {{'welcome' | translate}} !
+    </p>
+  </div>
+  <div class="router-container">
+    <h3>Routed content</h3>
+    <router-outlet></router-outlet>
+  </div>
+</main>

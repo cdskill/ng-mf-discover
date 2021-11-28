@@ -20,6 +20,7 @@
   "dependencies": {
     "@angular-architects/module-federation": "^13.0.1",
     "@angular/animations": "~12.2.0",
+    "@angular/cdk": "^13.0.2",
     "@angular/common": "~12.2.0",
     "@angular/compiler": "~12.2.0",
     "@angular/core": "~12.2.0",
@@ -27,12 +28,15 @@
     "@angular/platform-browser": "~12.2.0",
     "@angular/platform-browser-dynamic": "~12.2.0",
     "@angular/router": "~12.2.0",
+    "@ngx-translate/core": "^14.0.0",
+    "@ngx-translate/http-loader": "^7.0.0",
+    "counter-lib": "^0.0.2",
+    "ngx-translate-multi-http-loader": "^3.0.0",
     "primeicons": "^5.0.0",
     "primeng": "^13.0.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.3.0",
-    "zone.js": "~0.11.4",
-    "counter-lib": "^0.0.2"
+    "zone.js": "~0.11.4"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~12.2.13",

@@ -1,0 +1,30 @@
+.header {
+  display: flex;
+  align-items: center;
+  #languageSelector {
+    margin-left: auto;
+  }
+}
+
+#translated-content {
+  padding: 8px;
+  border: 5px rgb(255 0 0) dashed;
+}
+
+.start-menu-bar {
+  display: flex;
+  align-items: center;
+  .start-menu-bar-additional-content {
+    margin-left: 16px;
+  }
+}
+
+main {
+  padding: 32px 8px 8px 8px;
+}
+.router-container {
+  background-color: rgb(199 210 254);
+  border-radius: 8px;
+  padding: 8px;
+  margin-top: 16px;
+}
