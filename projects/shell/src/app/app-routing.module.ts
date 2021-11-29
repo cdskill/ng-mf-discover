@@ -15,12 +15,16 @@ const routes: Routes = [
       remoteName: 'product'
     }).then(m => m.ProductModule)
   },
+  // {
+  //   path: 'flights',
+  //   loadChildren: () => loadRemoteModule({
+  //     exposedModule: 'FlightsModule',
+  //     remoteName: 'mfAlone'
+  //   }).then(m => m.FlightsModule)
+  // },
   {
     path: 'flights',
-    loadChildren: () => loadRemoteModule({
-      exposedModule: './Module',
-      remoteName: 'mfAlone'
-    }).then(m => m.FlightsModule)
+    loadChildren: () => import('mfAlone/FlightsModule').then(m => m.FlightsModule)
   },
   // {
   //   path: 'customer',

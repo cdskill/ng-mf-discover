@@ -29,6 +29,7 @@ export class AppComponent implements OnInit {
   onLanguageChange({code}: {name: string, code: string}) {
     this.translateService.use(code)
   }
+
   ngOnDestroy(){
     this.destroyed$.next()
   }

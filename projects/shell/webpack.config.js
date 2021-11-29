@@ -6,7 +6,7 @@ const share = mf.share;
 const sharedMappings = new mf.SharedMappings();
 sharedMappings.register(
   path.join(__dirname, '../../tsconfig.json'),
-  ['shared-lib', 'counter-lib', '@ngx-translate/core']);
+  ['shared-lib']);
 
 module.exports = {
   output: {
@@ -24,7 +24,8 @@ module.exports = {
   plugins: [
     new ModuleFederationPlugin({
       remotes: {
-        "customer": "customer@http://localhost:5005/customerEntry.js"
+        "customer": "customer@http://localhost:5005/customerEntry.js",
+        "mfAlone": "mfAlone@http://localhost:8080/mfAloneEntry.js"
       },
       shared: share({
         "@angular/core": {singleton: true, strictVersion: true, requiredVersion: 'auto'},
