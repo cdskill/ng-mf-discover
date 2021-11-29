@@ -25,7 +25,7 @@ module.exports = {
     new ModuleFederationPlugin({
       remotes: {
         "customer": "customer@http://localhost:5005/customerEntry.js",
-        "mfAlone": "mfAlone@http://localhost:8080/mfAloneEntry.js"
+        "mfAlone": "mfAlone@http://localhost:8008/mfAloneEntry.js",
       },
       shared: share({
         "@angular/core": {singleton: true, strictVersion: true, requiredVersion: 'auto'},

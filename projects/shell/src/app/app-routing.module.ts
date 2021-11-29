@@ -26,6 +26,10 @@ const routes: Routes = [
     path: 'flights',
     loadChildren: () => import('mfAlone/FlightsModule').then(m => m.FlightsModule)
   },
+  {
+    path: 'reservations',
+    loadChildren: () => import('mfAlone/ReservationsModule').then(m => m.ReservationsModule)
+  },
   // {
   //   path: 'customer',
   //   loadChildren: () => loadRemoteModule({
